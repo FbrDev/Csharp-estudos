@@ -7,20 +7,13 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            // Filas = O primeiro que chega é o primeiro que sai
+            //Tuplas podemos ter vários valores de tipos diferentes
 
-            Queue fila = new Queue();
-            fila.Enqueue("Fabrício");
-            fila.Enqueue("Beatriz");
-            fila.Enqueue("Patinhas");
-            fila.Enqueue("Musk");
+            (string, string, double) brasil = ("Brasil", "Brasília", 1268.33);
+            WriteLine($"O {brasil.Item1}, cuja sua capital é {brasil.Item2} tem a rpc de R$ {brasil.Item3}");
 
-            WriteLine(fila.Peek());
-
-            WriteLine($"A fila tem {fila.Count} item");
-            WriteLine($"O item {fila.Dequeue()} foi retirado");
-            WriteLine($"A fila tem {fila.Count} item");
-            WriteLine($"O item {fila.Dequeue()} foi retirado");
+            (string nome, int populacao, string capital, double rpc) portugal = ("Portugal", 10000000, "Lisboa", 740.83);
+            WriteLine($"O {portugal.nome}, cuja sua capital é {portugal.capital} tem a rpc de R$ {portugal.rpc} e a população de {portugal.populacao}");
         }
     }
 }
