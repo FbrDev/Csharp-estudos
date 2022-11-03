@@ -7,32 +7,16 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            var i = 0;
-            while (i <= 10)
+            for (int i = 0; i <= 10; i++)
             {
-                if(i == 10) break;
-
-                if(i == 4) continue;
-
-                Write(i);
-                i++;
+                WriteLine(i);
             }
 
             string[] nomes = new string[] { "Fabrício", "Patinhas", "Musk" };
-            int x = 0;
-
-            while(x < nomes.Length)
+            for (int i = 0; i < nomes.Length; i++)
             {
-                WriteLine(nomes[x]);
-                x++;
+                WriteLine(nomes[i]);
             }
-
-            do
-            {
-                Write(i);
-                i++;
-            } while (i <= 10);
-
         }
     }
 }
