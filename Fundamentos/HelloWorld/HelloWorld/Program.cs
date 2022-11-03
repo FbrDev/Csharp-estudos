@@ -7,15 +7,32 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            for (int i = 0; i <= 10; i++)
+            string[] diasSemanas = new string[] { "DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB" };
+
+            foreach(string dia in diasSemanas)
             {
-                WriteLine(i);
+                Console.WriteLine(dia);
             }
 
-            string[] nomes = new string[] { "Fabrício", "Patinhas", "Musk" };
-            for (int i = 0; i < nomes.Length; i++)
+            Queue fila = new Queue();
+            fila.Enqueue("Fabrício");
+            fila.Enqueue("Beatriz");
+            fila.Enqueue("Patinhas");
+            fila.Enqueue("Musk");
+
+            foreach (string nome in fila)
             {
-                WriteLine(nomes[i]);
+                Console.WriteLine(nome);
+            }
+
+            List<string> nomes = new List<string>();
+            nomes.Add("Fernando");
+            nomes.Add("Gilson");
+            nomes.Add("Helio");
+
+            foreach(string nome in nomes)
+            {
+                Console.WriteLine(nome);
             }
         }
     }
