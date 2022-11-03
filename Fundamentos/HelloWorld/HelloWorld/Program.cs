@@ -6,38 +6,21 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            var x = 10;
-            var y = 5;
+            int[] x = new int[3];
+            x[0] = 5;
+            x[1] = 10;
+            x[2] = 15;
+            WriteLine(x[1]);
 
-            var soma = x + y;
-            var subtrair = x - y;
-            var multiplicar = x * y;
-            var dividir = x / y;
-            
+            string[] nomes = new string[2];
+            nomes[0] = "Fabrício";
+            nomes[1] = "Patinhas";
+            WriteLine(nomes[0]);
+            WriteLine(nomes[1]);
 
-            soma += subtrair;
-            soma -= subtrair;
-            soma *= subtrair;
-            soma /= subtrair;
-            soma %= subtrair;
+            string[] diasSemanas = new string[] { "DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB" };
+            WriteLine(diasSemanas[4]);
 
-            var resto = 7 % 3; // Pega o resto da divisão
-
-            WriteLine(soma);
-            WriteLine(subtrair);
-            WriteLine(multiplicar);
-            WriteLine(dividir);
-            WriteLine(resto);
-
-            var i = 0;
-
-            //Pós-incrementado
-            i++;
-            i--;
-
-            //Pré-incrementado
-            ++i;
-            --i;
         }
     }
 }
