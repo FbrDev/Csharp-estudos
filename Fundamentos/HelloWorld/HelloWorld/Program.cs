@@ -7,34 +7,43 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
+            Write("Informe o saldo do cartão/banco: ");
+            double eSaldo = Convert.ToDouble(ReadLine());
 
-            double salario = 0;
-            double gastosMensais = 0;
-            bool temDecimoTerceiro = false;
+            Write("Informe o valor da compra: ");
+            double eValor = Convert.ToDouble(ReadLine());
 
-            Write("Informe seu salario: ");
-            salario = Convert.ToDouble(ReadLine());
-            Write("Informe seu gastos mensais: ");
-            gastosMensais = Convert.ToDouble(ReadLine()); 
-            Write("Tem decímo terceiro? ");
-            Boolean.TryParse(ReadLine(), out temDecimoTerceiro);
+            Write("Informe o tipo de pagamento (C para Crédito e D para Débito): ");
+            char eTipo = Convert.ToChar(ReadLine());
 
-            if (temDecimoTerceiro)
+            (double saldo, double compra, char tipo) pagamento = (eSaldo, eValor, eTipo);
+
+            //pattern mapping
+            switch (pagamento.tipo)
             {
-                salario += salario;
+                case 'C' when pagamento.compra > pagamento.saldo:
+                    WriteLine("Compra com o cartão de crédito não aprovada");
+                    break;
+                case 'D' when pagamento.compra > pagamento.saldo:
+                    WriteLine("Compra com o cartão de débito não aprovada");
+                    break;
+                default:
+                    WriteLine("Compra Aprovada!");
+                    break;
             }
 
-            if (gastosMensais > salario)
+            /*switch (eTipo)
             {
-                WriteLine("Precisa economizar!");
-            }else if (gastosMensais == salario)
-            {
-                WriteLine("Ufaa! foi por pouco");
-            }
-            else
-            {
-                WriteLine("Sobrou dinheiro!!");
-            }
+                case 'C':
+                    WriteLine("Compra com Cartão de crédito");
+                    break;
+                case 'D':
+                    WriteLine("Compra com Cartão de Débito");
+                    break;
+                default:
+                    WriteLine("Compra com dinheiro");
+                    break;
+            }*/
         }
     }
 }
