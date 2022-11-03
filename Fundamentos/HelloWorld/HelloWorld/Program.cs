@@ -7,13 +7,34 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            //Tuplas podemos ter vários valores de tipos diferentes
 
-            (string, string, double) brasil = ("Brasil", "Brasília", 1268.33);
-            WriteLine($"O {brasil.Item1}, cuja sua capital é {brasil.Item2} tem a rpc de R$ {brasil.Item3}");
+            double salario = 0;
+            double gastosMensais = 0;
+            bool temDecimoTerceiro = false;
 
-            (string nome, int populacao, string capital, double rpc) portugal = ("Portugal", 10000000, "Lisboa", 740.83);
-            WriteLine($"O {portugal.nome}, cuja sua capital é {portugal.capital} tem a rpc de R$ {portugal.rpc} e a população de {portugal.populacao}");
+            Write("Informe seu salario: ");
+            salario = Convert.ToDouble(ReadLine());
+            Write("Informe seu gastos mensais: ");
+            gastosMensais = Convert.ToDouble(ReadLine()); 
+            Write("Tem decímo terceiro? ");
+            Boolean.TryParse(ReadLine(), out temDecimoTerceiro);
+
+            if (temDecimoTerceiro)
+            {
+                salario += salario;
+            }
+
+            if (gastosMensais > salario)
+            {
+                WriteLine("Precisa economizar!");
+            }else if (gastosMensais == salario)
+            {
+                WriteLine("Ufaa! foi por pouco");
+            }
+            else
+            {
+                WriteLine("Sobrou dinheiro!!");
+            }
         }
     }
 }
