@@ -7,43 +7,32 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            Write("Informe o saldo do cartão/banco: ");
-            double eSaldo = Convert.ToDouble(ReadLine());
-
-            Write("Informe o valor da compra: ");
-            double eValor = Convert.ToDouble(ReadLine());
-
-            Write("Informe o tipo de pagamento (C para Crédito e D para Débito): ");
-            char eTipo = Convert.ToChar(ReadLine());
-
-            (double saldo, double compra, char tipo) pagamento = (eSaldo, eValor, eTipo);
-
-            //pattern mapping
-            switch (pagamento.tipo)
+            var i = 0;
+            while (i <= 10)
             {
-                case 'C' when pagamento.compra > pagamento.saldo:
-                    WriteLine("Compra com o cartão de crédito não aprovada");
-                    break;
-                case 'D' when pagamento.compra > pagamento.saldo:
-                    WriteLine("Compra com o cartão de débito não aprovada");
-                    break;
-                default:
-                    WriteLine("Compra Aprovada!");
-                    break;
+                if(i == 10) break;
+
+                if(i == 4) continue;
+
+                Write(i);
+                i++;
             }
 
-            /*switch (eTipo)
+            string[] nomes = new string[] { "Fabrício", "Patinhas", "Musk" };
+            int x = 0;
+
+            while(x < nomes.Length)
             {
-                case 'C':
-                    WriteLine("Compra com Cartão de crédito");
-                    break;
-                case 'D':
-                    WriteLine("Compra com Cartão de Débito");
-                    break;
-                default:
-                    WriteLine("Compra com dinheiro");
-                    break;
-            }*/
+                WriteLine(nomes[x]);
+                x++;
+            }
+
+            do
+            {
+                Write(i);
+                i++;
+            } while (i <= 10);
+
         }
     }
 }
