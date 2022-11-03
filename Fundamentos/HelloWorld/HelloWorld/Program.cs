@@ -6,21 +6,28 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            int[] x = new int[3];
-            x[0] = 5;
-            x[1] = 10;
-            x[2] = 15;
-            WriteLine(x[1]);
+            // Pilhas = O que entra por último sai primeiro
 
-            string[] nomes = new string[2];
-            nomes[0] = "Fabrício";
-            nomes[1] = "Patinhas";
-            WriteLine(nomes[0]);
-            WriteLine(nomes[1]);
+            Stack<int> p1 = new Stack<int>();
 
-            string[] diasSemanas = new string[] { "DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB" };
-            WriteLine(diasSemanas[4]);
+            // Coloca itens dentro da pilha
+            p1.Push(2);
+            p1.Push(3);
+            p1.Push(5);
+            p1.Push(7);
+            p1.Push(11);
 
+            WriteLine($"A pilha tem {p1.Count} itens");
+            //WriteLine(p1.ToArray().GetValue(4));
+            WriteLine(p1.Peek()); // Pega o ultimo elemento
+
+            p1.Pop(); // Retira o item da pilha
+
+            WriteLine($"A pilha tem {p1.Count} itens");
+
+            WriteLine(p1.Count); // Quantidade de itens na pilha
+            //WriteLine(p1.ToArray().GetValue(3));
+            WriteLine(p1.Peek());
         }
     }
 }
