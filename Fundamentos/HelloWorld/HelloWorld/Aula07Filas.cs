@@ -9,8 +9,9 @@ namespace HelloWorld
 {
     internal class Aula07Filas
     {
-        static void Aula07()
+        public static void Aula07()
         {
+            WriteLine("FILAS");
             // Filas = O primeiro que chega é o primeiro que sai
 
             Queue fila = new Queue();
@@ -25,6 +26,8 @@ namespace HelloWorld
             WriteLine($"O item {fila.Dequeue()} foi retirado");
             WriteLine($"A fila tem {fila.Count} item");
             WriteLine($"O item {fila.Dequeue()} foi retirado");
+
+            WriteLine("======================================");
         }
     }
 }

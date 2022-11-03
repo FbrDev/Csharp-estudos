@@ -8,8 +8,9 @@ namespace HelloWorld
 {
     internal class Aula09IfElseifElse
     {
-        static void Aula09()
+        public static void Aula09()
         {
+            WriteLine("IF, ELSEIF E ELSE");
             double salario = 0;
             double gastosMensais = 0;
             bool temDecimoTerceiro = false;
@@ -38,6 +39,7 @@ namespace HelloWorld
             {
                 WriteLine("Sobrou dinheiro!!");
             }
+            WriteLine("======================================");
         }
     }
 }

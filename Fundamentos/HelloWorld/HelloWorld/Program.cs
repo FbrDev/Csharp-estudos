@@ -7,33 +7,19 @@ namespace HelloWorld
     {
         static void Main(string[] args) // Metódo de inicialização da aplicação
         {
-            string[] diasSemanas = new string[] { "DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB" };
-
-            foreach(string dia in diasSemanas)
-            {
-                Console.WriteLine(dia);
-            }
-
-            Queue fila = new Queue();
-            fila.Enqueue("Fabrício");
-            fila.Enqueue("Beatriz");
-            fila.Enqueue("Patinhas");
-            fila.Enqueue("Musk");
-
-            foreach (string nome in fila)
-            {
-                Console.WriteLine(nome);
-            }
-
-            List<string> nomes = new List<string>();
-            nomes.Add("Fernando");
-            nomes.Add("Gilson");
-            nomes.Add("Helio");
-
-            foreach(string nome in nomes)
-            {
-                Console.WriteLine(nome);
-            }
+            Aula01HelloWorld.Aula01();
+            Aula02Variaveis.Aula02();
+            Aula03TiposDados.Aula03();
+            Aula04Operadores.Aula04();
+            Aula05Arrays.Aula05();
+            Aula06Pilhas.Aula06();
+            Aula07Filas.Aula07();
+            Aula08Tuplas.Aula08();
+            Aula09IfElseifElse.Aula09();
+            Aula10SwitchCase.Aula10();
+            Aula11WhileDoWhile.Aula11();
+            Aula12For.Aula12();
+            Aula13Foreach.Aula13();
         }
     }
 }

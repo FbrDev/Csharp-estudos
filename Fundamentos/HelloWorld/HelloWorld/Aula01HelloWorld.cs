@@ -3,11 +3,10 @@ namespace HelloWorld
 {
     internal class Aula01HelloWorld
     {
-        static void Aula01()
+        public static void Aula01()
         {
             WriteLine("Hello, World!"); // Comando para exibir informações na tela
-
-            ReadKey(); // Espera um comando do usuário para fechar o console
+            WriteLine("======================================");
         }
     }
 }

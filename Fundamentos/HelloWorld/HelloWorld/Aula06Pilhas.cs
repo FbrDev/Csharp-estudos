@@ -4,8 +4,9 @@ namespace HelloWorld
 {
     internal class Aula06Pilhas
     {
-        static void Aula06()
+        public static void Aula06()
         {
+            WriteLine("PILHAS");
             // Pilhas = O que entra por último sai primeiro
 
             Stack<int> p1 = new Stack<int>();
@@ -28,6 +29,7 @@ namespace HelloWorld
             WriteLine(p1.Count); // Quantidade de itens na pilha
             //WriteLine(p1.ToArray().GetValue(3));
             WriteLine(p1.Peek());
+            WriteLine("======================================");
         }
     }
 }

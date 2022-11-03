@@ -3,8 +3,10 @@ namespace HelloWorld
 {
     internal class Aula03TiposDados
     {
-        static void Aula03()
+        public static void Aula03()
         {
+            WriteLine("TIPOS DE DADOS");
+
             char status = 'A'; //Armazena apenas um caractere
             bool ativo = true; //Verdadeiro/falso
             byte numero = 1;// 0 a 255;
@@ -26,6 +28,8 @@ namespace HelloWorld
             short n3 = (short)n1; //Necessário converter de forma explicita
             WriteLine(n2);
             WriteLine(n3);
+
+            WriteLine("======================================");
         }
     }
 }

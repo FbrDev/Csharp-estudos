@@ -8,8 +8,9 @@ namespace HelloWorld
 {
     internal class Aula10SwitchCase
     {
-        static void Aula10()
+        public static void Aula10()
         {
+            WriteLine("SWITCH CASE");
             Write("Informe o saldo do cartão/banco: ");
             double eSaldo = Convert.ToDouble(ReadLine());
 
@@ -47,6 +48,7 @@ namespace HelloWorld
                     WriteLine("Compra com dinheiro");
                     break;
             }*/
+            WriteLine("======================================");
         }
     }
 }

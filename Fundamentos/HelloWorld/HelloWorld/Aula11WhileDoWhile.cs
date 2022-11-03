@@ -8,8 +8,9 @@ namespace HelloWorld
 {
     internal class Aula11WhileDoWhile
     {
-        static void Aula11()
+        public static void Aula11()
         {
+            WriteLine("WHILE E DO WHILE");
             var i = 0;
             while (i <= 10)
             {
@@ -35,6 +36,7 @@ namespace HelloWorld
                 Write(i);
                 i++;
             } while (i <= 10);
+            WriteLine("======================================");
         }
     }
 }

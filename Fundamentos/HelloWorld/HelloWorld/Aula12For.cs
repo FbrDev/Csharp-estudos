@@ -8,8 +8,9 @@ namespace HelloWorld
 {
     internal class Aula12For
     {
-        static void Aula12()
+        public static void Aula12()
         {
+            WriteLine("FOR");
             for (int i = 0; i <= 10; i++)
             {
                 WriteLine(i);
@@ -20,6 +21,7 @@ namespace HelloWorld
             {
                 WriteLine(nomes[i]);
             }
+            WriteLine("======================================");
         }
     }
 }

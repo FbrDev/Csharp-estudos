@@ -4,8 +4,10 @@ namespace HelloWorld
 {
     internal class Aula02Variaveis
     {
-        static void Aula02()
+        public static void Aula02()
         {
+            WriteLine("VARIAVEIS");
+
             int idade = 21;
             string nome = "Fabrício Pereira";
             bool ativo = false;
@@ -22,6 +24,8 @@ namespace HelloWorld
             WriteLine(x);
             x = true;
             WriteLine(x);
+
+            WriteLine("======================================");
         }
     }
 }

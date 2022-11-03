@@ -4,8 +4,10 @@ namespace HelloWorld
 {
     internal class Aula04Operadores
     {
-        static void Aula04()
+        public static void Aula04()
         {
+            WriteLine("OPERADORES");
+
             var x = 10;
             var y = 5;
 
@@ -25,19 +27,21 @@ namespace HelloWorld
 
             WriteLine(soma);
             WriteLine(subtrair);
-        WriteLine(multiplicar);
-        WriteLine(dividir);
-        WriteLine(resto);
+            WriteLine(multiplicar);
+            WriteLine(dividir);
+            WriteLine(resto);
 
-        var i = 0;
+            var i = 0;
 
-        //Pós-incrementado
-        i++;
+            //Pós-incrementado
+            i++;
             i--;
 
             //Pré-incrementado
             ++i;
             --i;
+
+            WriteLine("======================================");
         }
     }
 }

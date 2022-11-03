@@ -4,8 +4,10 @@ namespace HelloWorld
 {
     internal class Aula05Arrays
     {
-        static void Aula05()
+        public static void Aula05()
         {
+            WriteLine("ARRAYS");
+
             int[] x = new int[3];
             x[0] = 5;
             x[1] = 10;
@@ -20,6 +22,8 @@ namespace HelloWorld
 
             string[] diasSemanas = new string[] { "DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB" };
             WriteLine(diasSemanas[4]);
+
+            WriteLine("======================================");
         }
     }
 }
