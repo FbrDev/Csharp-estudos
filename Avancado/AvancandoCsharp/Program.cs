@@ -6,30 +6,17 @@ namespace AvancandoCsharp
     {
         static void Main(string[] args)
         {
-            string frase = "Hoje à noite, sem luz, decidi xeretar a quinta gaveta de vovô: achei linguiça, pão e fubá";
+            string nome = "Fabricio";
+            int idade = 21;
+            double rendimento = 433012.02;
+            DateTime dataCadastro = new DateTime(2000,04,02);
 
-            Console.WriteLine(frase.Length); // Conta quantos caracteres
+            string frase = "O cliente {0} tem {1} anos de idade, o redimento dele é {2:c} ";
+            frase += "é cliente desde de {3:dd/MM/yyyy}";
 
-            string[] partes = frase.Split(","); // Quebra a frase em pedaços com base em um caractere
-            for(var i = 0; i < partes.Length; i++)
-            {
-                Console.WriteLine(partes[i].Trim()); // Retira os espaços
-            }
+            frase = String.Format(frase, nome, idade, rendimento, dataCadastro);
 
-            string subFrase = "quinta";
-            Console.WriteLine(frase.Contains(subFrase)); // retorna um boolean caso encontre a frase
-
-            int pos = frase.IndexOf(subFrase); // Mostra a posição da palavra
-
-            string sub = frase.Substring(pos);
-            Console.WriteLine(sub);
-
-            Console.WriteLine(frase.ToUpper());
-            Console.WriteLine(frase.ToLower());
-
-            string fraseTrocada = frase.Replace("Vovô", "mamãe", true, CultureInfo.CurrentCulture);
-            Console.WriteLine(fraseTrocada.Trim());
-
+            Console.WriteLine(frase);
         }
     }
 }
