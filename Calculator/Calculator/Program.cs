@@ -19,7 +19,8 @@
             Console.WriteLine("3 - Divisão");
             Console.WriteLine("4 - Multiplicação");
             Console.WriteLine("5 - Bhaskara");
-            Console.WriteLine("6 - Sair");
+            Console.WriteLine("6 - Porcentagem");
+            Console.WriteLine("7 - Sair");
             Console.WriteLine("----------------------------");
             Console.Write("Selecione uma opção: ");
             short opt = short.Parse(Console.ReadLine());
@@ -31,7 +32,8 @@
                 case 3: Divisao(); break;
                 case 4: Multiplicao(); break;
                 case 5: Bhaskara(); break;
-                case 6: Sair(); break;
+                case 6: Porcentagem(); break;
+                case 7: Sair(); break;
                 default: Menu(); break;
             }
         }
@@ -155,6 +157,25 @@
                 Console.WriteLine($"Resultado X1 = {x1}\n");
                 Console.WriteLine($"Resultado X2 = {x2}\n");
             }
+
+            RetornaMenu();
+        }
+        #endregion
+
+        #region Porcentagem
+        private static void Porcentagem()
+        {
+            Console.Clear();
+            Console.WriteLine("Cálculo de Porcentagem\n");
+
+            Console.Write("Digite o valor: ");
+            decimal valor = decimal.Parse(Console.ReadLine());
+
+            Console.Write("Digite a porcentagem: ");
+            decimal porcentagem = decimal.Parse(Console.ReadLine());
+
+            decimal resultado = (porcentagem / 100) * valor;
+            Console.WriteLine($"{porcentagem}% de {valor} = {decimal.Floor(resultado)}");
 
             RetornaMenu();
         }
