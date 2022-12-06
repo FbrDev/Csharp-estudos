@@ -27,8 +27,34 @@ namespace EditorHTML
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
 
             Console.WriteLine("===========");
-            Console.WriteLine(" Deseja Salvar o arquivo?");
-            Viewer.Show(file.ToString());
+            Console.WriteLine(" Deseja Salvar o arquivo? S/N");
+            char opcao = Char.Parse(Console.ReadLine().ToLower());
+            if (opcao == 'n')
+                Menu.Show();
+            Salvar(file.ToString());
+        }
+
+        static void Salvar(string text)
+        {
+            try
+            {
+                Console.Clear();
+                Console.WriteLine(" Qual caminho para salvar o caminho?");
+                string path = Console.ReadLine();
+
+                using (StreamWriter file = new StreamWriter(path))
+                {
+                    file.Write(text);
+                }
+
+                Console.WriteLine($"Arquivo {path} salvo com sucesso!");
+                Console.ReadLine();
+                Menu.Show();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

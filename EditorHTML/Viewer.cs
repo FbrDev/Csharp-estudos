@@ -5,6 +5,19 @@ namespace EditorHTML
 {
     public static class Viewer
     {
+        public static void AbrirArquivo()
+        {
+            Console.Clear();
+            Console.WriteLine("Qual o caminho do arquivo?");
+            string path = Console.ReadLine();
+
+            using (StreamReader file = new StreamReader(path))
+            {
+                string text = file.ReadToEnd();
+                Viewer.Show(text);
+            }
+        }
+
         public static void Show(string text)
         {
             Console.Clear();
@@ -12,9 +25,8 @@ namespace EditorHTML
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
             Console.WriteLine("Modo de Visualização");
-            Console.WriteLine("===========");
+            Console.WriteLine("====================");
             Replace(text);
-            Console.WriteLine("===========");
             Console.ReadKey();
             Menu.Show();
         }
